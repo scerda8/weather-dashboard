@@ -1,0 +1,53 @@
+
+h2#title{
+padding:14px 14px;
+background-color: rgba(159, 147, 205, 0.619);
+color:whitesmoke;
+text-align: center;
+
+}
+
+ h2#name{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    color:mediumslateblue;
+} 
+section#forcast{
+    display:flex;
+    justify-content: space-around;
+
+}
+
+h2#search-input{
+display:flex;
+padding: 14px 14px;
+background-color: rgba(159, 147, 205, 0.619);
+justify-content: center;
+color:whitesmoke;
+}
+section#current{
+    display: list-item;
+    justify-content: space-around;
+
+
+}
+h1#current-title{
+ padding:14px 14px; 
+background-color: rgba(159, 147, 205, 0.619);
+color:whitesmoke;
+text-align: center;
+}
+h1#weather-title{
+    padding:14px 14px; 
+    background: linear-gradient(#e66465, #9198e5);
+    color:rgba(255, 255, 255, 0.807);
+    text-align: center;
+}
+input#search-input{
+    -webkit-box-align:center;
+    outline-offset: -2px;
+
+}
+button{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

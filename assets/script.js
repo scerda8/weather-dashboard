@@ -13,9 +13,18 @@ function handleSearchSubmit(event){
 }
 function fetchWeather(city){
   const apiUrlWeather = `https://api.openweathermap.org/data/2.5/weather?appid=${APIKey}&q=${city}&units=imperial`;
-  fetch(apiUrlWeather).then(res=>res.json())
+  fetch(apiUrlWeather).then(res=>{
+    if(!res.ok){
+      throw new Error("city not found")
+    }else {
+     return res.json()
+    }
+
+
+  })
   .then(data=>{
     console.log(data);
+    saveCity(data.name);
     displayCurrentWeather(data)
     const {lat,lon}=data.coord
     const apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${APIKey}`;
@@ -24,6 +33,8 @@ function fetchWeather(city){
       displayForcast(data)
       console.log(data);
     })
+  }).catch(error=>{
+    alert(error.message)
   })
 }
 
@@ -58,14 +69,22 @@ function displayForcast(data){
 }
 function saveCity(city){
   if(!cityArr.includes(city)){
-    cityArr.push(city)
+    cityArr.unshift(city)
     localStorage.setItem("history",JSON.stringify(cityArr))
 renderHis()
   } else return 
 }
 function renderHis(){
   const historyEl=document.querySelector('#history')
+  historyEl.innerHTML=""
+  cityArr.forEach(city=>{
+    const btn=document.createElement("button")
+    btn.textContent=city
+    btn.onclick=()=>fetchWeather(city)
+    historyEl.append(btn)
+  })
 }
+renderHis()
 
 document.querySelector('form').addEventListener('submit',handleSearchSubmit)
 

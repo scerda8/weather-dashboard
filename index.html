@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Weather Dashboard</title>
 </head>
 <body>
+    <h1 id="weather-title">Weather Dashboard</h1>
     <form><input type="text" id="search-input">
         <button type="submit"> Search!</button>
     </form>
     <section id="current">
+        <h1 id="current-title">Current Weather</h1>
         <h2 id="name"></h2>
         <h2 id="date"></h2>
         <img id="icon">
@@ -17,7 +20,9 @@
         <p id="humidity"></p>
         <p id="wind"></p>
     </section>
+    <h2 id="title">5-Day Forecast</h2>
     <section id="forcast"></section>
+    <h2 id="search-input">Previous City Searches</h2>
     <section id="history"></section>
     <script src="./assets/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="crossorigin="anonymous" >
