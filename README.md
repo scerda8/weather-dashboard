@@ -1,4 +1,3 @@
-# weather-dashboard
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -51,3 +50,6 @@ https://github.com/scerda8/weather-dashboard.git
 
 ### Deployment Link:
 https://scerda8.github.io/weather-dashboard/
+
+
+![image](https://github.com/user-attachments/assets/ec0169f3-9fa1-42a3-9985-2de67a4e4b6d)
